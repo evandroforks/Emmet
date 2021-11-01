@@ -476,9 +476,8 @@ class ExpandAbbreviationByTab(sublime_plugin.TextCommand):
 		h = TabAndCompletionsHandler()
 		if not h.expand_by_tab(view):
 			# try to mimic default Tab behaviour of Sublime Text
-			view.run_command('insert_best_completion', {
-				'default': '\t',
-				'exact': user_settings.get('tab_completion', True)
+			view.run_command('insert', {
+				'characters': '\t',
 			})
 
 
