@@ -506,7 +506,8 @@ class TabExpandHandler(sublime_plugin.EventListener):
 			if not l:
 				return []
 
-			return (l, sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS)
+			# return (l, sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS)
+			return (l)
 
 		if not h.correct_syntax(view) or settings.get('disable_completions', False):
 			return []
